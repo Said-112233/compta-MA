@@ -1,0 +1,105 @@
+/* explanation-style.css - تنسيقات قسم الشروحات الأساسية */
+
+/* العنوان الرئيسي للمفهوم (نفس الكلاس من script.js) */
+#account-details h2.content-title { /* يستخدم أيضا للشروحات */
+    /* قد يكون نفس تنسيق عنوان قسم الحسابات من style.css أو بتعديلات طفيفة */
+    color: #004080;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 15px; /* زيادة طفيفة */
+    margin-bottom: 30px; /* زيادة طفيفة */
+    text-align: center;
+    font-size: 2em; /* حجم أكبر قليلاً */
+    font-weight: 600;
+}
+
+/* حاوية محتوى الشرح */
+.explanation-content {
+    background-color: #ffffff; /* خلفية بيضاء نقية */
+    border-radius: 8px;
+    padding: 25px 30px; /* حشو أكبر للمحتوى */
+    border: 1px solid #e7eaf0; /* حد أفتح */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06); */ /* يمكن إضافة ظل إذا رغبت */
+}
+
+/* فقرات الشرح */
+.explanation-content p {
+    line-height: 1.9; /* مسافة أكبر بين السطور */
+    margin-bottom: 20px; /* مسافة أكبر بعد الفقرة */
+    color: #444b52; /* لون أغمق ومختلف قليلاً */
+    text-align: justify; /* جرب هذه المحاذاة */
+    padding-right: 0; /* إزالة الحشو الافتراضي للفقرة هنا */
+    font-size: 1.05em; /* نص أكبر قليلاً */
+}
+
+/* العناوين الفرعية داخل الشرح */
+.explanation-content h2 { /* H2 داخل الشرح */
+    font-size: 1.7em;
+    color: #0056b3; /* لون رئيسي */
+    margin-top: 35px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.explanation-content h3 { /* H3 داخل الشرح */
+    font-size: 1.4em;
+    color: #007bff; /* أزرق أفتح */
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-weight: 600; /* أثقل قليلا */
+}
+
+/* القوائم */
+.explanation-content ul,
+.explanation-content ol {
+    padding-right: 40px; /* مسافة بادئة أكبر */
+    margin-bottom: 22px;
+}
+
+.explanation-content li {
+    margin-bottom: 14px; /* مسافة أكبر بين العناصر */
+    line-height: 1.75;
+    color: #505a64;
+}
+
+.explanation-content ul ul,
+.explanation-content ol ol,
+.explanation-content ul ol,
+.explanation-content ol ul {
+    margin-top: 12px;
+    margin-bottom: 12px; /* مسافة أيضا بعد القائمة الفرعية */
+    padding-right: 30px; /* مسافة بادئة أصغر قليلاً للفرعية */
+}
+
+/* تمييز الكلمات المهمة (قد ترث من style.css أو تعيد تعريفها) */
+.explanation-content strong,
+.explanation-content b {
+    color: #bf4f00; /* تغيير لون التمييز للبرتقالي مثلا */
+    font-weight: bold;
+}
+
+/* الجداول الصغيرة داخل الشرح */
+.explanation-content .mini-journal {
+    max-width: 650px;
+    margin: 20px auto; /* مسافة أكبر حول الجدول */
+    border: 1px solid #b8daff; /* حد أزرق سماوي */
+    font-size: 0.88em; /* تصغير إضافي طفيف */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* ظل أخف */
+    background-color: #f8fbff; /* خلفية زرقاء فاتحة جدا للجدول */
+}
+.explanation-content .mini-journal thead {
+    background-color: #d6e9ff; /* رأس جدول أغمق */
+    color: #032b5a; /* نص أغمق للرأس */
+    font-weight: bold;
+}
+
+.explanation-content .mini-journal th,
+.explanation-content .mini-journal td {
+     border: 1px solid #d1e2f5; /* حدود داخلية */
+     padding: 8px 10px;
+}
+.explanation-content .mini-journal .debit-col,
+.explanation-content .mini-journal .credit-col {
+    font-family: 'Courier New', Courier, monospace; /* استخدام خط مختلف للأرقام */
+    font-weight: bold;
+}

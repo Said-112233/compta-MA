@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- Always RTL in this version -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المحاسبة المغربي الشامل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explanation-style.css">
+    <style>
+        /* CSS to display the translation span */
+        .button-translation { display: block; font-size: 0.75em; color: #6c757d; margin-top: 2px; font-weight: normal; }
+        nav button { margin-bottom: 20px !important; } /* Added !important for emphasis if needed */
+        /* Other inline styles can go here if necessary */
+    </style>
+</head>
+<body>
+    <!-- No language switcher -->
+    <header>
+        <h1>دليل المحاسبة المغربي الشامل</h1>
+        <p>شرح مبسط للحسابات والمفاهيم الأساسية بالدارجة المغربية</p>
+    </header>
+
+    <!-- Mode Buttons with FR/DA text -->
+    <div class="mode-selector-container">
+        <button id="mode-plan-comptable-btn" class="mode-btn active-mode-btn">📖 Plan Comptable<span class="button-translation">دليل الحسابات</span></button>
+        <button id="mode-shuruhat-btn" class="mode-btn">💡 Notions & Docs<span class="button-translation">مفاهيم ووثائق</span></button>
+        <button id="mode-societes-btn" class="mode-btn">🏢 Types Sociétés<span class="button-translation">أنواع الشركات</span></button>
+    </div>
+
+    <nav>
+        <!-- 1. Plan Comptable Nav -->
+        <div id="plan-comptable-nav" class="mode-nav active-mode-nav">
+            <h2>Classes du Plan Comptable:</h2>
+            <h3>🚨سيتم اضافة حسابات  المتبقية قريبا 🚨 </h3>
+            <div class="class-selector">
+                 <button data-classe="1">Classe 1: Financement permanent <span class="button-translation">(صنف 1: التمويل الدائم)</span></button>
+                 <button data-classe="2">Classe 2: Actif immobilisé <span class="button-translation">(صنف 2: الأصول الثابتة)</span></button>
+                 <button data-classe="3">Classe 3: Actif circulant <span class="button-translation">(صنف 3: الأصول المتداولة)</span></button>
+                 <button data-classe="4">Classe 4: Passif circulant <span class="button-translation">(صنف 4: الخصوم المتداولة)</span></button>
+                 <button data-classe="5">Classe 5: Trésorerie <span class="button-translation">(صنف 5: الخزينة)</span></button>
+                 <button data-classe="6">Classe 6: Charges <span class="button-translation">(صنف 6: الأعباء/المصاريف)</span></button>
+                 <button data-classe="7">Classe 7: Produits <span class="button-translation">(صنف 7: الإيرادات/المداخيل)</span></button>
+             </div>
+        </div>
+
+        <!-- 2. Shuruhat Nav -->
+        <div id="shuruhat-nav" class="mode-nav">
+            <h2>Notions et Documents:</h2>
+            <div class="concept-selector">
+                <button data-concept="bilan">Document: Le Bilan <span class="button-translation">(وثيقة: الميزانية)</span></button>
+                <button data-concept="cpc">Document: Le CPC <span class="button-translation">(وثيقة: حساب النتائج)</span></button>
+                <button data-concept="journal">Document: Le Journal <span class="button-translation">(وثيقة: اليومية)</span></button>
+                <button data-concept="grand_livre">Document: Le Grand Livre <span class="button-translation">(وثيقة: دفتر الأستاذ)</span></button>
+                <button data-concept="balance">Document: La Balance <span class="button-translation">(وثيقة: ميزان المراجعة)</span></button>
+                <button data-concept="etic">Document: L'ETIC (TF) <span class="button-translation">(وثيقة: جدول التمويل)</span></button>
+                <button data-concept="compta_types">Types de Comptabilité <span class="button-translation">(أنواع المحاسبة)</span></button>
+                <button data-concept="amort_prov">Notions: Amortissements & Provisions <span class="button-translation">(مفاهيم: الاستهلاك والمؤونة)</span></button>
+                <button data-concept="journaux_types">Les Journaux Auxiliaires (dont OD) <span class="button-translation">(أنواع اليوميات المساعدة ومنها OD)</span></button>
+             </div>
+        </div>
+
+        <!-- 3. Societes Nav -->
+        <div id="societes-nav" class="mode-nav">
+            <h2>Formes Juridiques et Statuts:</h2>
+            <div class="societe-type-selector">
+                <button data-societe="autoentrepreneur">Auto-entrepreneur <span class="button-translation">(المقاول الذاتي)</span></button>
+                 <button data-societe="sarl_au">SARL AU <span class="button-translation">(ش.م.م. بشريك واحد)</span></button>
+                 <button data-societe="sarl">SARL <span class="button-translation">(ذات المسؤولية المحدودة)</span></button>
+                 <button data-societe="sa">SA <span class="button-translation">(المساهمة)</span></button>
+                 <button data-societe="snc">SNC <span class="button-translation">(التضامن)</span></button>
+                 <button data-societe="scs">SCS <span class="button-translation">(التوصية البسيطة)</span></button>
+                 <button data-societe="sca">SCA <span class="button-translation">(التوصية بالأسهم)</span></button>
+                 <button data-societe="sas">SAS <span class="button-translation">(الأسهم المبسطة)</span></button>
+                 <button data-societe="giew">GIE <span class="button-translation">(تجمع النفع الاقتصادي)</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="account-details">
+        <p id="initial-prompt">الرجاء اختيار وضع العرض (دليل الحسابات، مفاهيم ووثائق، أنواع الشركات) من الأعلى، ثم اختر الموضوع المطلوب.</p>
+    </main>
+
+    <footer>
+        <p>تطبيق تعليمي مبسط - المعلومات للمراجعة والتأكد</p>
+        
+    </footer>
+
+    <!-- ==== Load Data Files ==== -->
+    <script src="data/classe1.js"></script>
+    <script src="data/classe2.js"></script>
+    <script src="data/classe3.js"></script>
+    <script src="data/classe4.js"></script>
+    <script src="data/classe5.js"></script>
+    <script src="data/classe6.js"></script>
+    <script src="data/classe7.js"></script>
+    <script src="explanations.js"></script>
+    <script src="data/societes.js"></script>
+    <!-- No translations.js -->
+    <script src="script.js"></script>
+
+</body>
+</html>
